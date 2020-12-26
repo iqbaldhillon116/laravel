@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Hash;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,22 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//create a user route
+Route::get('/user-create',function(Request $request)
+{
+    App\User::create([
+
+        'name' => ' iqbal dhillon' ,
+        'email' => 'csevilleja@digitalocean.com' ,
+        'password' => Hash::make('mypassword')
+
+    ]);
+}
+)
+
+
+//login a user
+
+
+//logout a user
