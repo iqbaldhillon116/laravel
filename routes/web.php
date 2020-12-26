@@ -36,3 +36,5 @@ Route::get('admin/post/example',array('as'=>'admin.home',function(){
 //Route::get('/apnacontroller','\App\Http\Controllers\CrudController@index');
 
 Route::resource('/CrudCreate/{id}','\App\Http\Controllers\CrudController');
+
+
